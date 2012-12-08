@@ -14,6 +14,7 @@ class BlogpostsController < ApplicationController
   # GET /blogposts/1.json
   def show
     @blogpost = Blogpost.find(params[:id])
+    @comment = @blogpost.comments.build
 
     respond_to do |format|
       format.html # show.html.erb

@@ -1,4 +1,6 @@
 Railsgirlsblog::Application.routes.draw do
+  resources :comments
+
   resources :blogposts do
     collection do
       get 'latest'
